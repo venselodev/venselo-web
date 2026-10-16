@@ -1,0 +1,358 @@
+{
+    "metadata": {
+        "title": "Venselo — Back office para agentes de viajes de Disney y Universal",
+        "description": "Registrá ventas y comisiones, importá tu historial desde Excel y recibí un email antes de cada pago y vencimiento de reserva. Planes para agentes y agencias."
+    },
+    "nav": {
+        "home": "Inicio de Venselo",
+        "aria": "Principal",
+        "product": "Producto",
+        "agencies": "Agencias",
+        "pricing": "Precios",
+        "faq": "Preguntas",
+        "contact": "Contacto",
+        "signIn": "Ingresar",
+        "demo": "Agendar demo",
+        "language": "Idioma"
+    },
+    "cta": {
+        "start": "Comenzar",
+        "pricing": "Ver precios"
+    },
+    "hero": {
+        "label": "Para agentes de viajes de Disney y Universal",
+        "title": "Nunca más se te pasa un vencimiento ni una comisión.",
+        "lede": "Venselo es el back office para agentes y agencias que venden vacaciones de Disney y Universal. Registrá cada venta y comisión, traé tu historial desde Excel y recibí un email antes de cada pago y cada vencimiento de reserva.",
+        "note": "Los planes de agencia arrancan con {days} días de prueba gratis."
+    },
+    "shots": {
+        "fromApp": "Captura de la app",
+        "alt": {
+            "sales": "Pantalla de Ventas de Venselo: tabla de reservas con fechas de check-in y check-out, monto, comisión de agencia y de agente, y estado",
+            "overview": "Resumen de Venselo: cantidad de ventas, total vendido, comisión cobrada y no cobrada, costo promedio de venta, clientes viajando ahora y gráficos de los últimos 6 meses",
+            "alerts": "Calendario de alertas de Venselo con vencimientos de pago final marcados en el mes",
+            "leads": "Tablero de leads con columnas Nuevo, Contactado y Cotizado",
+            "import": "Paso Subir de Importar ventas: elegir entre importar ventas nuevas o actualizar reservas existentes, y soltar un archivo .xlsx"
+        },
+        "caption": {
+            "sales": "Ventas. Cada reserva con sus fechas, monto, reparto de comisión y estado.",
+            "overview": "Resumen",
+            "alerts": "Calendario de alertas",
+            "import": "Importar ventas",
+            "leads": "Pipeline de leads"
+        }
+    },
+    "timeline": {
+        "label": "Alertas incluidas",
+        "title": "Días antes del check-in",
+        "body": "Cada venta recibe sus alertas según el producto vendido. Venselo te avisa por email antes de cada vencimiento y deja de recordarte el pago final cuando el cliente pagó el total.",
+        "aria": "Línea de tiempo de alertas por días antes del check-in",
+        "rules": [
+            {
+                "title": "Pago final",
+                "product": "Disney Cruise Line, 8 noches o más"
+            },
+            {
+                "title": "Pago final",
+                "product": "Disney Cruise Line, hasta 7 noches"
+            },
+            {
+                "title": "Reservas de restaurantes",
+                "product": "Estadías en hoteles Disney"
+            },
+            {
+                "title": "Pago final",
+                "product": "Universal hotel y entradas"
+            },
+            {
+                "title": "Pago final y check-in online",
+                "product": "Disney hotel y entradas, cruceros"
+            },
+            {
+                "title": "Lightning Lane",
+                "product": "Paquetes Disney / solo entradas"
+            },
+            {
+                "title": "Check-in",
+                "product": ""
+            }
+        ]
+    },
+    "facts": {
+        "aria": "De un vistazo",
+        "items": [
+            {
+                "title": "Disney, Universal, Disney Cruise Line",
+                "body": "Proveedores, hoteles y reglas de alertas incluidos."
+            },
+            {
+                "title": "Español e inglés",
+                "body": "Cada usuario elige su idioma cuando quiere."
+            },
+            {
+                "title": "Sincronización de calendario",
+                "body": "Vencimientos en Google Calendar, Apple Calendar u Outlook."
+            },
+            {
+                "title": "Importación desde Excel",
+                "body": "Detecta columnas, reconoce hoteles y omite duplicados."
+            }
+        ]
+    },
+    "product": {
+        "label": "Producto",
+        "title": "Todo lo que pasa entre la reserva y la comisión.",
+        "lede": "Ventas, pagos, vencimientos, leads y presupuestos en un solo lugar. Pensado para cómo trabajan los agentes de Disney y Universal.",
+        "overview": {
+            "title": "Tu mes de un vistazo",
+            "body": "El resumen arranca con lo que importa hoy.",
+            "points": [
+                "Cantidad de ventas, total vendido y comisión",
+                "Comisión no cobrada y costo promedio de venta",
+                "Ventas y comisión cobrada, últimos 6 meses",
+                "Clientes viajando ahora y próximas alertas"
+            ]
+        },
+        "alerts": {
+            "title": "Todos los vencimientos en un calendario",
+            "body": "Las alertas se crean solas con cada venta. Nunca escribís un recordatorio.",
+            "points": [
+                "Email antes de cada vencimiento, más un aviso anticipado",
+                "Agrupadas por urgencia: vencidas, críticas, próximas",
+                "Sincronizá con Google Calendar, Apple Calendar u Outlook",
+                "Alertas personalizadas para lo que quieras seguir"
+            ]
+        },
+        "import": {
+            "title": "Importá años de ventas de una sola vez",
+            "body": "Subí tu Excel y elegí: importar ventas nuevas, omitiendo los IDs de reserva que ya tenés, o actualizar reservas existentes. Venselo detecta cada columna y reconoce hoteles y proveedores. Revisás cada fila antes de guardar."
+        },
+        "leads": {
+            "title": "Leads y presupuestos que terminan en ventas",
+            "body": "Mové cada lead de nuevo a contactado, cotizado, ganado o perdido. Mandá un presupuesto como link que tu cliente puede abrir, imprimir o guardar como PDF, y convertilo en venta cuando reserve."
+        },
+        "more": {
+            "aria": "También en Venselo",
+            "items": [
+                {
+                    "title": "Pagos",
+                    "body": "Registrá cada pago del cliente contra la venta y mirá cuánto falta."
+                },
+                {
+                    "title": "Reparto de comisión",
+                    "body": "Comisión de agencia y de agente calculada en cada venta."
+                },
+                {
+                    "title": "Objetivos",
+                    "body": "Definí una meta de ventas para un período y seguí el avance."
+                },
+                {
+                    "title": "Reportes",
+                    "body": "Ventas, modificaciones y cancelaciones, exportables a Excel."
+                },
+                {
+                    "title": "Presupuestos",
+                    "body": "Ítems, fecha de validez y un link para compartir con el cliente."
+                },
+                {
+                    "title": "Claro y oscuro",
+                    "body": "Oscuro por defecto, con modo claro cuando lo prefieras."
+                }
+            ]
+        }
+    },
+    "agencies": {
+        "label": "Para agencias",
+        "title": "Manejá toda la agencia desde un solo back office.",
+        "lede": "Cada agente trabaja en su propio Venselo. Vos ves todo, decidís cómo se reparte la comisión y les pagás a los agentes con registro exacto de qué ventas se pagaron.",
+        "modules": [
+            {
+                "title": "Resumen",
+                "body": "KPIs de todos los agentes de la agencia."
+            },
+            {
+                "title": "Agentes",
+                "body": "Invitá agentes en lote y definí el reparto de comisión de cada uno."
+            },
+            {
+                "title": "Comisiones",
+                "body": "Pagos a agentes, con historial completo."
+            },
+            {
+                "title": "Bonos",
+                "body": "Competencias y metas para motivar al equipo."
+            },
+            {
+                "title": "Leads",
+                "body": "Un pipeline para toda la agencia. Asigná leads a tus agentes."
+            },
+            {
+                "title": "Managers",
+                "body": "Sumá los que necesites. Nunca cuentan para el límite de agentes."
+            }
+        ],
+        "payout": {
+            "title": "Cómo funciona un pago de comisiones",
+            "steps": [
+                {
+                    "title": "Elegí las ventas a pagar",
+                    "body": "Seleccioná las ventas de un agente con comisión pendiente."
+                },
+                {
+                    "title": "Creá el pago",
+                    "body": "Venselo guarda una copia de esas ventas y del reparto usado."
+                },
+                {
+                    "title": "Las ventas quedan pagadas",
+                    "body": "El agente las ve como pagadas. Si anulás el pago, se liberan de nuevo."
+                }
+            ]
+        },
+        "bonus": {
+            "title": "Dos tipos de bono",
+            "items": [
+                {
+                    "title": "Primero en llegar",
+                    "body": "Gana el primer agente que alcanza un monto o una cantidad de ventas."
+                },
+                {
+                    "title": "Mejores agentes",
+                    "body": "Ganan los N mejores agentes del período, por monto o cantidad de ventas."
+                }
+            ]
+        }
+    },
+    "pricing": {
+        "label": "Precios",
+        "title": "Un precio para vos, o uno para toda tu agencia.",
+        "lede": "Precios en dólares estadounidenses. Los planes de agencia anuales cuestan 10 meses.",
+        "period": {
+            "aria": "Período de facturación",
+            "monthly": "Mensual",
+            "yearly": "Anual",
+            "yearlyAria": "Facturación anual",
+            "free": "2 meses gratis"
+        },
+        "perMonth": "/ mes",
+        "perYear": "/ año",
+        "mo": "/ mes",
+        "yr": "/ año",
+        "agent": {
+            "name": "Agente",
+            "tag": "Individual",
+            "description": "Para un agente independiente que vende por su cuenta.",
+            "billing": "Solo facturación mensual.",
+            "features": [
+                "Seguimiento de ventas y comisiones",
+                "Importación masiva desde Excel",
+                "Alertas por email antes de cada vencimiento",
+                "Leads, presupuestos, objetivos y reportes"
+            ]
+        },
+        "agency": {
+            "name": "Agencia",
+            "tag": "{days} días gratis",
+            "description": "Para agencias con equipo. Elegí según cuántos agentes tenés.",
+            "tiersAria": "Cantidad de agentes",
+            "upTo": "Hasta {count} agentes",
+            "unlimited": "Ilimitado",
+            "startTrial": "Empezar {days} días gratis",
+            "billedAfterTrial": "Facturado mensualmente después de la prueba.",
+            "yearlyEquivalent": "US$ {amount} por mes, facturado anualmente.",
+            "perAgent": "US$ {amount} por agente con {count} agentes.",
+            "noCap": "Sin límite de agentes.",
+            "capLine": "Hasta {count} agentes, managers ilimitados",
+            "capUnlimited": "Agentes y managers ilimitados",
+            "features": [
+                "Todo lo del plan Agente, para cada agente",
+                "Panel de la agencia y KPIs",
+                "Reparto de comisiones, pagos y bonos",
+                "Pipeline de leads de toda la agencia"
+            ]
+        },
+        "fine": "Los pagos los procesa Lemon Squeezy. Cambiá o cancelá tu plan cuando quieras desde Configuración › Facturación."
+    },
+    "faq": {
+        "label": "Preguntas",
+        "title": "Lo que preguntan los agentes antes de cambiarse.",
+        "items": [
+            {
+                "q": "¿Hay prueba gratis?",
+                "a": "Los planes de agencia arrancan con 7 días de prueba gratis. El plan Agente cuesta US$ 10 por mes."
+            },
+            {
+                "q": "¿Puedo traer las ventas que ya tengo en Excel?",
+                "a": "Sí. Subí tu archivo, confirmá qué es cada columna y revisá las filas antes de guardar. Venselo reconoce hoteles y proveedores y omite los IDs de reserva que ya están en tu cuenta. También podés usar el archivo para actualizar reservas existentes."
+            },
+            {
+                "q": "¿De qué vencimientos me avisa Venselo?",
+                "a": "Pagos finales de paquetes Disney, Disney Cruise Line y Universal, check-in online de cruceros, reservas de restaurantes y Lightning Lane. Cada venta recibe las alertas de su producto. Para todo lo demás podés crear alertas personalizadas."
+            },
+            {
+                "q": "¿Qué pasa si el cliente paga antes?",
+                "a": "Registrá el pago en la venta. Cuando lo pagado llega al total, se deja de enviar el recordatorio de pago final."
+            },
+            {
+                "q": "¿Puedo ver los vencimientos en Google Calendar?",
+                "a": "Sí. Suscribite a tus alertas desde Google Calendar, Apple Calendar u Outlook. Aparecen como eventos de día completo y se actualizan solas."
+            },
+            {
+                "q": "¿Quién cuenta para el límite de agentes del plan de agencia?",
+                "a": "Solo los agentes. Los managers son ilimitados y nunca cuentan. Si crecés, pasás al plan siguiente: 10, 30, 60 o agentes ilimitados."
+            },
+            {
+                "q": "¿Venselo está en español y en inglés?",
+                "a": "Sí. Todas las pantallas y los emails de alertas están en los dos idiomas, y cada persona elige el suyo."
+            },
+            {
+                "q": "¿Cómo funciona el plan anual?",
+                "a": "Los planes de agencia anuales cuestan lo mismo que 10 meses: tenés 2 meses gratis. El plan Agente es solo mensual. Los pagos los maneja Lemon Squeezy y podés cambiar o cancelar tu plan desde Configuración."
+            }
+        ]
+    },
+    "contact": {
+        "label": "Contacto",
+        "title": "Hablemos de tu agencia.",
+        "lede": "¿Vas a pasar un equipo desde planillas, o necesitás más de 60 agentes? Contanos sobre tu agencia y te respondemos por email.",
+        "body": "Respondemos en español o en inglés.",
+        "form": {
+            "aria": "Formulario de contacto",
+            "name": "Nombre",
+            "namePlaceholder": "Tu nombre",
+            "email": "Email",
+            "emailPlaceholder": "vos@agencia.com",
+            "agency": "Agencia",
+            "agencyPlaceholder": "Nombre de la agencia",
+            "size": "Agentes",
+            "sizePlaceholder": "Elegí una opción",
+            "sizes": {
+                "just_me": "Solo yo",
+                "2_10": "2 a 10",
+                "11_30": "11 a 30",
+                "31_60": "31 a 60",
+                "60_plus": "Más de 60"
+            },
+            "message": "Mensaje",
+            "messagePlaceholder": "¿Qué te gustaría saber?",
+            "send": "Enviar mensaje",
+            "sending": "Enviando…",
+            "success": "Mensaje enviado. Te respondemos por email.",
+            "invalid": "Completá tu nombre, un email válido y el mensaje.",
+            "error": "No pudimos enviar el mensaje. Probá de nuevo en unos minutos."
+        }
+    },
+    "closing": {
+        "title": "Dejá de perseguir vencimientos en una planilla.",
+        "lede": "Importá tus ventas y Venselo arma todas las alertas por vos."
+    },
+    "footer": {
+        "description": "Back office para agentes y agencias de viajes de Disney y Universal.",
+        "product": "Producto",
+        "features": "Funciones",
+        "help": "Ayuda",
+        "theme": "Tema",
+        "dark": "Oscuro",
+        "light": "Claro",
+        "rights": "© {year} Venselo"
+    }
+}

@@ -1,0 +1,358 @@
+{
+    "metadata": {
+        "title": "Venselo — Back office for Disney and Universal travel agents",
+        "description": "Track sales and commissions, import your history from Excel and get an email before every payment and booking deadline. Plans for agents and agencies."
+    },
+    "nav": {
+        "home": "Venselo home",
+        "aria": "Main",
+        "product": "Product",
+        "agencies": "Agencies",
+        "pricing": "Pricing",
+        "faq": "FAQ",
+        "contact": "Contact",
+        "signIn": "Sign in",
+        "demo": "Book a demo",
+        "language": "Language"
+    },
+    "cta": {
+        "start": "Get started",
+        "pricing": "See pricing"
+    },
+    "hero": {
+        "label": "For Disney and Universal travel agents",
+        "title": "Never miss a deadline or a commission again.",
+        "lede": "Venselo is the back office for agents and agencies that sell Disney and Universal vacations. Track every sale and commission, bring your history in from Excel, and get an email before every payment and booking deadline.",
+        "note": "Agency plans start with a {days}-day free trial."
+    },
+    "shots": {
+        "fromApp": "Screen from the app",
+        "alt": {
+            "sales": "The Venselo Sales screen: a table of reservations with check-in and check-out dates, amount, agency and agent commission, and status",
+            "overview": "The Venselo Overview: total sales, revenue, commission, unpaid commission, average sale price, clients travelling now and charts for the last six months",
+            "alerts": "The Venselo Alerts calendar with final payment deadlines marked in the month",
+            "leads": "The Leads board with New, Contacted and Quoted columns",
+            "import": "The upload step of Import sales: choose between importing new sales or updating existing reservations, and drop an .xlsx file"
+        },
+        "caption": {
+            "sales": "Sales. Every reservation with its dates, amount, commission split and status.",
+            "overview": "Overview",
+            "alerts": "Alerts calendar",
+            "import": "Import sales",
+            "leads": "Leads pipeline"
+        }
+    },
+    "timeline": {
+        "label": "Built-in alert rules",
+        "title": "Days before check-in",
+        "body": "Each sale gets its alerts from the product you sold. Venselo emails you before each one is due and stops the final payment reminder once the client has paid in full.",
+        "aria": "Timeline of alerts by days before check-in",
+        "rules": [
+            {
+                "title": "Final payment",
+                "product": "Disney Cruise Line, 8 nights or more"
+            },
+            {
+                "title": "Final payment",
+                "product": "Disney Cruise Line, up to 7 nights"
+            },
+            {
+                "title": "Restaurant reservations",
+                "product": "Disney hotel stays"
+            },
+            {
+                "title": "Final payment",
+                "product": "Universal hotel and tickets"
+            },
+            {
+                "title": "Final payment, online check-in",
+                "product": "Disney hotel and tickets, cruises"
+            },
+            {
+                "title": "Lightning Lane",
+                "product": "Disney packages / tickets only"
+            },
+            {
+                "title": "Check-in",
+                "product": ""
+            }
+        ]
+    },
+    "facts": {
+        "aria": "At a glance",
+        "items": [
+            {
+                "title": "Disney, Universal, Disney Cruise Line",
+                "body": "Suppliers, hotels and alert rules built in."
+            },
+            {
+                "title": "Spanish and English",
+                "body": "Each user picks their language, any time."
+            },
+            {
+                "title": "Calendar sync",
+                "body": "Deadlines in Google Calendar, Apple Calendar or Outlook."
+            },
+            {
+                "title": "Excel import",
+                "body": "Columns detected, hotels matched, duplicates skipped."
+            }
+        ]
+    },
+    "product": {
+        "label": "Product",
+        "title": "Everything between the booking and the commission.",
+        "lede": "Sales, payments, deadlines, leads and quotes in one place. Built around how Disney and Universal agents actually work.",
+        "overview": {
+            "title": "Your month at a glance",
+            "body": "The overview opens with what matters today.",
+            "points": [
+                "Total sales, revenue and commission",
+                "Unpaid commission and average sale",
+                "Sales and commission paid, last six months",
+                "Clients travelling now and the next alerts"
+            ]
+        },
+        "alerts": {
+            "title": "Every deadline on one calendar",
+            "body": "Alerts are created for each sale. You never type a reminder.",
+            "points": [
+                "Email before each deadline, plus an early notice",
+                "Grouped by urgency: overdue, critical, upcoming",
+                "Sync to Google Calendar, Apple Calendar or Outlook",
+                "Custom alerts for anything else you track"
+            ]
+        },
+        "import": {
+            "title": "Import years of sales in one upload",
+            "body": "Upload your Excel file and choose: import new sales, skipping reservation IDs you already have, or update existing reservations. Venselo detects each column and matches hotels and suppliers. You review every row before it is saved."
+        },
+        "leads": {
+            "title": "Leads and quotes that turn into sales",
+            "body": "Move each lead from new to contacted, quoted, won or lost. Send a quote as a link your client can open, print or save as a PDF, then convert it into a sale when they book."
+        },
+        "more": {
+            "aria": "Also in Venselo",
+            "items": [
+                {
+                    "title": "Payments",
+                    "body": "Record each client payment against the sale and see what is still due."
+                },
+                {
+                    "title": "Commission split",
+                    "body": "Agency and agent commission calculated on every sale."
+                },
+                {
+                    "title": "Goals",
+                    "body": "Set a sales target for a period and watch the progress."
+                },
+                {
+                    "title": "Reports",
+                    "body": "Sales, modifications and cancellations, exported to Excel."
+                },
+                {
+                    "title": "Quotes",
+                    "body": "Line items, validity date and a shareable link for the client."
+                },
+                {
+                    "title": "Light and dark",
+                    "body": "Dark by default, with a light mode when you prefer it."
+                }
+            ]
+        }
+    },
+    "agencies": {
+        "label": "For agencies",
+        "title": "Run the whole agency from one back office.",
+        "lede": "Every agent works in their own Venselo. You see all of it, decide how commission is split, and pay agents out with a record of exactly which sales were paid.",
+        "modules": [
+            {
+                "title": "Overview",
+                "body": "KPIs across every agent in the agency."
+            },
+            {
+                "title": "Agents",
+                "body": "Invite agents in bulk and set each one's commission split."
+            },
+            {
+                "title": "Commissions",
+                "body": "Payouts to agents, with full history."
+            },
+            {
+                "title": "Bonuses",
+                "body": "Sales races and targets to motivate the team."
+            },
+            {
+                "title": "Leads",
+                "body": "One pipeline for the agency. Assign leads to agents."
+            },
+            {
+                "title": "Managers",
+                "body": "Add as many as you need. They never count toward your agent limit."
+            }
+        ],
+        "payout": {
+            "title": "How a commission payout works",
+            "steps": [
+                {
+                    "title": "Select the sales to pay",
+                    "body": "Pick an agent's sales with commission still unpaid."
+                },
+                {
+                    "title": "Create the payout",
+                    "body": "Venselo saves a snapshot of those sales and the split used."
+                },
+                {
+                    "title": "Sales are marked paid",
+                    "body": "The agent sees each one as paid. Voiding a payout releases them again."
+                }
+            ]
+        },
+        "bonus": {
+            "title": "Two kinds of bonus",
+            "items": [
+                {
+                    "title": "First to a target",
+                    "body": "The first agent to reach a revenue or sales count wins."
+                },
+                {
+                    "title": "Top agents",
+                    "body": "The best N agents for the period win, by revenue or sales count."
+                }
+            ]
+        }
+    },
+    "pricing": {
+        "label": "Pricing",
+        "title": "One price for you, or one for your whole agency.",
+        "lede": "Prices in US dollars. Yearly agency plans cost 10 months.",
+        "period": {
+            "aria": "Billing period",
+            "monthly": "Monthly",
+            "yearly": "Yearly",
+            "yearlyAria": "Bill yearly",
+            "free": "2 months free"
+        },
+        "perMonth": "/ month",
+        "perYear": "/ year",
+        "mo": "/ mo",
+        "yr": "/ yr",
+        "agent": {
+            "name": "Agent",
+            "tag": "Individual",
+            "description": "For an independent agent selling on their own.",
+            "billing": "Billed monthly only.",
+            "features": [
+                "Sales and commission tracking",
+                "Bulk import from Excel",
+                "Email alerts before every deadline",
+                "Leads, quotes, goals and reports"
+            ]
+        },
+        "agency": {
+            "name": "Agency",
+            "tag": "{days}-day free trial",
+            "description": "For agencies with a team. Choose by how many agents you have.",
+            "tiersAria": "Number of agents",
+            "upTo": "Up to {count} agents",
+            "unlimited": "Unlimited",
+            "startTrial": "Start {days}-day free trial",
+            "billedAfterTrial": "Billed monthly after the trial.",
+            "yearlyEquivalent": "US$ {amount} a month, billed yearly.",
+            "perAgent": "US$ {amount} per agent with {count} agents.",
+            "noCap": "No limit on agents.",
+            "capLine": "Up to {count} agents, unlimited managers",
+            "capUnlimited": "Unlimited agents and managers",
+            "features": [
+                "Everything in Agent, for every agent",
+                "Agency dashboard and KPIs",
+                "Commission splits, payouts and bonuses",
+                "Agency-wide lead pipeline"
+            ]
+        },
+        "fine": "Payments are processed by Lemon Squeezy. Change or cancel your plan any time from Settings › Billing."
+    },
+    "faq": {
+        "label": "FAQ",
+        "title": "Questions agents ask before they switch.",
+        "items": [
+            {
+                "q": "Is there a free trial?",
+                "a": "Agency plans start with a 7-day free trial. The Agent plan is US$ 10 a month."
+            },
+            {
+                "q": "Can I bring in the sales I already have in Excel?",
+                "a": "Yes. Upload your file, confirm which column is which, and review the rows before saving. Venselo matches hotels and suppliers and skips any reservation ID already in your account. You can also use a file to update existing reservations."
+            },
+            {
+                "q": "Which deadlines does Venselo remind me about?",
+                "a": "Final payments for Disney packages, Disney Cruise Line and Universal, online check-in for cruises, restaurant reservations and Lightning Lane. Each sale gets the alerts that apply to its product. You can add custom alerts for anything else."
+            },
+            {
+                "q": "What happens if my client pays early?",
+                "a": "Record the payment on the sale. Once the total paid reaches the full amount, the final payment reminder stops."
+            },
+            {
+                "q": "Can I see my deadlines in Google Calendar?",
+                "a": "Yes. Subscribe to your alerts from Google Calendar, Apple Calendar or Outlook. Deadlines show as all-day events and update on their own."
+            },
+            {
+                "q": "Who counts toward an agency plan's agent limit?",
+                "a": "Only agents. Managers are unlimited and never count. If you grow past your plan, move up to the next one: 10, 30, 60 or unlimited agents."
+            },
+            {
+                "q": "Is Venselo available in Spanish and English?",
+                "a": "Yes. Every screen and every alert email is in both languages, and each person picks their own."
+            },
+            {
+                "q": "How does yearly billing work?",
+                "a": "Yearly agency plans cost the same as 10 months, so you get 2 months free. The Agent plan is monthly only. Payments are handled by Lemon Squeezy, and you can change or cancel your plan from Settings."
+            }
+        ]
+    },
+    "contact": {
+        "label": "Contact",
+        "title": "Talk to us about your agency.",
+        "lede": "Moving a team over from spreadsheets, or need more than 60 agents? Tell us about your agency and we will reply by email.",
+        "body": "We answer in Spanish or English.",
+        "form": {
+            "aria": "Contact form",
+            "name": "Name",
+            "namePlaceholder": "Your name",
+            "email": "Email",
+            "emailPlaceholder": "you@agency.com",
+            "agency": "Agency",
+            "agencyPlaceholder": "Agency name",
+            "size": "Agents",
+            "sizePlaceholder": "Pick one",
+            "sizes": {
+                "just_me": "Just me",
+                "2_10": "2 to 10",
+                "11_30": "11 to 30",
+                "31_60": "31 to 60",
+                "60_plus": "More than 60"
+            },
+            "message": "Message",
+            "messagePlaceholder": "What would you like to know?",
+            "send": "Send message",
+            "sending": "Sending…",
+            "success": "Message sent. We will reply by email.",
+            "invalid": "Add your name, a valid email and a message.",
+            "error": "We couldn't send your message. Try again in a few minutes."
+        }
+    },
+    "closing": {
+        "title": "Stop chasing deadlines in a spreadsheet.",
+        "lede": "Import your sales and Venselo sets up every alert for you."
+    },
+    "footer": {
+        "description": "Back office for Disney and Universal travel agents and agencies.",
+        "product": "Product",
+        "features": "Features",
+        "help": "Help",
+        "theme": "Theme",
+        "dark": "Dark",
+        "light": "Light",
+        "rights": "© {year} Venselo"
+    }
+}

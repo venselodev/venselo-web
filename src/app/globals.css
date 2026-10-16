@@ -1,0 +1,274 @@
+@import "tailwindcss";
+@import "shadcn/tailwind.css";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+
+    /* Swiss grid extras: utilities like bg-success-soft text-success border-line-strong */
+    --color-surface-hover: var(--surface-hover);
+    --color-line-strong: var(--line-strong);
+    --color-magenta-text: var(--magenta-text);
+    --color-magenta-soft: var(--magenta-soft);
+    --color-success: var(--success);
+    --color-success-soft: var(--success-soft);
+    --color-warning: var(--warning);
+    --color-warning-soft: var(--warning-soft);
+    --color-danger: var(--danger);
+    --color-danger-soft: var(--danger-soft);
+    --color-info: var(--info);
+    --color-info-soft: var(--info-soft);
+    --color-overlay: var(--overlay);
+
+    /* Square by default: the whole radius scale collapses to 2px so every
+       rounded-* utility in the app follows the grid. Layout regions (cards,
+       tables, sheets) use rounded-none; only rounded-full stays round. */
+    --radius-xs: 1px;
+    --radius-sm: 2px;
+    --radius-md: 2px;
+    --radius-lg: 2px;
+    --radius-xl: 2px;
+    --radius-2xl: 2px;
+    --radius-3xl: 2px;
+    --radius-4xl: 2px;
+
+    /* Flat: nothing in the page flow casts a shadow; floating layers use shadow-float. */
+    --shadow-2xs: 0 0 #0000;
+    --shadow-xs: 0 0 #0000;
+    --shadow-sm: 0 0 #0000;
+    --shadow-md: var(--shadow-float);
+    --shadow-lg: var(--shadow-float);
+    --shadow-xl: var(--shadow-float);
+    --shadow-2xl: var(--shadow-float);
+
+    --text-2xs: 0.625rem;
+    --font-sans: var(--font-plex-sans), "Helvetica Neue", Arial, sans-serif;
+    --font-heading: var(--font-plex-sans), "Helvetica Neue", Arial, sans-serif;
+    --font-mono: var(--font-plex-mono), ui-monospace, Menlo, monospace;
+}
+
+/* ============================================================
+   Venselo — Swiss grid
+   True black (dark) or warm off-white paper (light), hairline structure,
+   one brand color (magenta) spent only where the agent must act.
+   Source of truth: the Venselo design system (tokens.json).
+   ============================================================ */
+
+/* === Light: warm off-white paper, never pure white === */
+:root {
+    --radius: 2px;
+
+    --background: #f3f2ee;
+    --foreground: #111110;
+
+    --card: #eae8e3;
+    --card-foreground: #111110;
+    --popover: #fbfaf8;
+    --popover-foreground: #111110;
+
+    --primary: #e0157b;
+    --primary-foreground: #ffffff;
+
+    --secondary: #eae8e3;
+    --secondary-foreground: #111110;
+
+    --muted: #eae8e3;
+    --muted-foreground: #57554f;
+
+    --accent: #e2e0da;
+    --accent-foreground: #111110;
+
+    --destructive: #b3261e;
+
+    --border: #d9d6cf;
+    --input: #7f7d77;
+    --ring: #e0157b;
+
+    --surface-hover: #e2e0da;
+    --line-strong: #7f7d77;
+    --magenta-hover: #c4106b;
+    --magenta-text: #c8106c;
+    --magenta-soft: #fae7ef;
+
+    --success: #1d6b35;
+    --success-soft: #e3f4e8;
+    --warning: #7a5600;
+    --warning-soft: #fff3cc;
+    --danger: #b3261e;
+    --danger-soft: #fde8e6;
+    --info: #1c5a91;
+    --info-soft: #e3f0fb;
+
+    --overlay: rgb(0 0 0 / 0.4);
+    --shadow-float: 0 12px 32px rgb(0 0 0 / 0.1);
+
+    --chart-1: #e0157b;
+    --chart-2: #111110;
+    --chart-3: #57554f;
+    --chart-4: #9e9b94;
+    --chart-5: #cfccc5;
+
+    --sidebar: #eae8e3;
+    --sidebar-foreground: #111110;
+    --sidebar-primary: #e0157b;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #e2e0da;
+    --sidebar-accent-foreground: #111110;
+    --sidebar-border: #d9d6cf;
+    --sidebar-ring: #e0157b;
+
+    color-scheme: light;
+}
+
+/* === Dark (default theme): true black === */
+.dark {
+    --background: #0b0b0b;
+    --foreground: #f5f5f5;
+
+    --card: #141414;
+    --card-foreground: #f5f5f5;
+    --popover: #1a1a1a;
+    --popover-foreground: #f5f5f5;
+
+    --primary: #e0157b;
+    --primary-foreground: #ffffff;
+
+    --secondary: #141414;
+    --secondary-foreground: #f5f5f5;
+
+    --muted: #141414;
+    --muted-foreground: #8c8c8c;
+
+    --accent: #1f1f1f;
+    --accent-foreground: #f5f5f5;
+
+    --destructive: #ff8a80;
+
+    --border: #262626;
+    --input: #707070;
+    --ring: #e0157b;
+
+    --surface-hover: #1f1f1f;
+    --line-strong: #707070;
+    --magenta-hover: #c4106b;
+    --magenta-text: #ff5aa8;
+    --magenta-soft: #2e0a1c;
+
+    --success: #7ee2a0;
+    --success-soft: #10301c;
+    --warning: #f5cf6b;
+    --warning-soft: #33280a;
+    --danger: #ff8a80;
+    --danger-soft: #3a1210;
+    --info: #8ccbf5;
+    --info-soft: #0f2a3d;
+
+    --overlay: rgb(0 0 0 / 0.7);
+    --shadow-float: 0 12px 32px rgb(0 0 0 / 0.6);
+
+    --chart-1: #e0157b;
+    --chart-2: #f5f5f5;
+    --chart-3: #a3a3a3;
+    --chart-4: #6b6b6b;
+    --chart-5: #3a3a3a;
+
+    --sidebar: #141414;
+    --sidebar-foreground: #f5f5f5;
+    --sidebar-primary: #e0157b;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #1f1f1f;
+    --sidebar-accent-foreground: #f5f5f5;
+    --sidebar-border: #262626;
+    --sidebar-ring: #e0157b;
+
+    color-scheme: dark;
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background font-sans text-foreground;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+
+    ::selection {
+        background: var(--magenta-soft);
+        color: var(--foreground);
+    }
+
+    /* Figures line up in tables and KPIs */
+    .tabular-nums,
+    td,
+    [data-slot="badge"] {
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+/* === Landing === */
+
+@utility label-mono {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
+
+    /* Anchored sections clear the sticky header. */
+    [id] {
+        scroll-margin-top: 72px;
+    }
+}
