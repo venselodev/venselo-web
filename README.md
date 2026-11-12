@@ -1,7 +1,7 @@
 # venselo-web
 
 Marketing site for Venselo: one landing page in Spanish (`/`) and English (`/en`).
-Same stack and look as the app (webcore): Next.js 16, Tailwind v4, shadcn/ui restyled to the Swiss grid, IBM Plex, next-intl.
+Same stack and look as the app (webcore): Next.js 16, Tailwind v4, shadcn/ui restyled to the Venselo design system (Castillo al atardecer: violet, rose and gold on black or paper white, Fredoka + Inter), next-intl.
 
 ```bash
 pnpm install
@@ -19,7 +19,7 @@ pnpm lint && pnpm typecheck && pnpm build
 | Prices and agent limits | `src/constants/pricing.ts` (mirror of webcore's `PLANS`, keep in sync) |
 | App screenshots | `public/screenshots/{es,en}/{name}-{dark,light}.png`, picked by `src/lib/screenshots.ts` |
 | Contact form endpoint | `src/app/api/contact/route.ts` (sends with Resend) |
-| Swiss grid tokens | `src/app/globals.css` (copied from webcore) and `src/components/ui/*` |
+| Design tokens | `src/app/globals.css` (copied from webcore, plus the landing block at the end) and `src/components/ui/*` |
 
 ## Screenshots
 

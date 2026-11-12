@@ -7,6 +7,7 @@ import { SIGN_UP_URL } from "@/lib/site"
 import { cn } from "@/lib/utils"
 import { GRID, H1, LEDE, MAIN, RAIL, TEXT_LINK } from "./grid"
 import { Screenshot } from "./screenshot"
+import Sparkle from "./sparkle"
 
 export async function Hero({ locale }: { locale: Locale }) {
     const t = await getTranslations("hero")
@@ -16,7 +17,10 @@ export async function Hero({ locale }: { locale: Locale }) {
     return (
         <>
             <section aria-labelledby="hero-title" className={cn(GRID, "gap-y-6 pt-12 pb-14 sm:pt-20")}>
-                <p className={cn(RAIL, "label-mono lg:pt-3.5")}>{t("label")}</p>
+                <p className={cn(RAIL, "flex h-fit items-center gap-2 eyebrow lg:pt-3.5")}>
+                    <Sparkle size={14} />
+                    {t("label")}
+                </p>
                 <div className={cn(MAIN, "flex flex-col gap-7")}>
                     <h1 id="hero-title" className={cn(H1, "max-w-[12em]")}>
                         {t("title")}

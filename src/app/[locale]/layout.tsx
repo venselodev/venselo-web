@@ -10,22 +10,31 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
 import { SITE_URL } from "@/lib/site"
 
-const plexSans = localFont({
+const fredoka = localFont({
     src: [
-        { path: "../fonts/IBMPlexSans-400.woff2", weight: "400", style: "normal" },
-        { path: "../fonts/IBMPlexSans-500.woff2", weight: "500", style: "normal" },
-        { path: "../fonts/IBMPlexSans-600.woff2", weight: "600", style: "normal" },
+        { path: "../fonts/Fredoka-500.woff2", weight: "500", style: "normal" },
+        { path: "../fonts/Fredoka-600.woff2", weight: "600", style: "normal" },
     ],
-    variable: "--font-plex-sans",
+    variable: "--font-fredoka",
     display: "swap",
 })
 
-const plexMono = localFont({
+const inter = localFont({
     src: [
-        { path: "../fonts/IBMPlexMono-400.woff2", weight: "400", style: "normal" },
-        { path: "../fonts/IBMPlexMono-500.woff2", weight: "500", style: "normal" },
+        { path: "../fonts/Inter-400.woff2", weight: "400", style: "normal" },
+        { path: "../fonts/Inter-500.woff2", weight: "500", style: "normal" },
+        { path: "../fonts/Inter-600.woff2", weight: "600", style: "normal" },
     ],
-    variable: "--font-plex-mono",
+    variable: "--font-inter",
+    display: "swap",
+})
+
+const geistMono = localFont({
+    src: [
+        { path: "../fonts/GeistMono-400.woff2", weight: "400", style: "normal" },
+        { path: "../fonts/GeistMono-500.woff2", weight: "500", style: "normal" },
+    ],
+    variable: "--font-geist-mono",
     display: "swap",
 })
 
@@ -72,7 +81,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <html
             lang={locale}
             suppressHydrationWarning
-            className={`${plexSans.variable} ${plexMono.variable} antialiased`}
+            className={`${fredoka.variable} ${inter.variable} ${geistMono.variable} antialiased`}
         >
             <body>
                 <NextIntlClientProvider>

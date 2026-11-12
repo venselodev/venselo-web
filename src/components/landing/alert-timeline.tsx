@@ -32,7 +32,7 @@ export async function AlertTimeline() {
     return (
         <section aria-labelledby="timeline-title" className="border-t border-border">
             <div className={cn(GRID, "items-start gap-y-3 pt-8 pb-2")}>
-                <p className={cn(RAIL, "label-mono lg:pt-1.5")}>{t("label")}</p>
+                <p className={cn(RAIL, "eyebrow lg:pt-1.5")}>{t("label")}</p>
                 <div className={cn(MAIN, "grid gap-x-6 gap-y-3 sm:grid-cols-2")}>
                     <h2 id="timeline-title" className={H3}>
                         {t("title")}
@@ -43,7 +43,7 @@ export async function AlertTimeline() {
 
             {/* Desktop: the ruler */}
             <div role="img" aria-label={ariaLabel} className="relative mx-8 mt-6 mb-8 hidden h-[250px] lg:block">
-                <div className="absolute inset-x-0 top-[124px] h-px bg-foreground" />
+                <div className="absolute inset-x-0 top-[123px] h-[3px] rounded-full bg-primary-soft" />
                 {TICKS.map((d) => (
                     <span
                         key={d}
@@ -54,7 +54,7 @@ export async function AlertTimeline() {
                 {items.map((m) => (
                     <div key={m.days}>
                         <span
-                            className="absolute top-[121px] -ml-[3px] size-[7px] bg-foreground"
+                            className="absolute top-[120px] -ml-[4.5px] size-[9px] rounded-full bg-primary"
                             style={{ left: position(m.days) }}
                         />
                         <div
@@ -64,12 +64,12 @@ export async function AlertTimeline() {
                                     ? "top-0 h-[124px] justify-start"
                                     : "top-[125px] h-[125px] justify-end",
                                 "alignEnd" in m
-                                    ? "-translate-x-full border-r border-line-strong pr-2.5 text-right"
-                                    : "border-l border-line-strong pl-2.5"
+                                    ? "-translate-x-full border-r border-border pr-2.5 text-right"
+                                    : "border-l border-border pl-2.5"
                             )}
                             style={{ left: position(m.days) }}
                         >
-                            <span className="font-mono text-[22px] leading-[26px] font-medium tracking-[-0.02em]">
+                            <span className="font-heading text-[22px] leading-[26px] font-semibold text-primary-text tabular-nums">
                                 {m.label}
                             </span>
                             <span className="text-[13px] leading-[17px] font-semibold">{m.title}</span>
@@ -85,7 +85,7 @@ export async function AlertTimeline() {
             <ol className="mx-5 mt-4 mb-8 border-t border-border sm:mx-8 lg:hidden">
                 {items.map((m) => (
                     <li key={m.days} className="grid grid-cols-[64px_1fr] gap-3 border-b border-border py-3">
-                        <span className="font-mono text-[22px] leading-[26px] font-medium tracking-[-0.02em]">
+                        <span className="font-heading text-[22px] leading-[26px] font-semibold text-primary-text tabular-nums">
                             {m.label}
                         </span>
                         <span>

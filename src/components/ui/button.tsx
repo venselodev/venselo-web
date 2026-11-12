@@ -5,7 +5,7 @@ import { Slot } from "radix-ui"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button-variants"
 
-// Copied from webcore (Swiss grid), without the tooltip wrapper.
+// Copied from webcore (Sunset castle), without the tooltip wrapper.
 function Button({
     className,
     variant = "default",

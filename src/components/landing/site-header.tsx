@@ -11,11 +11,11 @@ export async function SiteHeader() {
     const tc = await getTranslations("cta")
 
     return (
-        <header className="sticky top-0 z-40 flex h-14 items-center gap-4 border-b border-border bg-background px-5 sm:gap-8 sm:px-8">
+        <header className="sticky top-0 z-40 flex h-14 items-center gap-4 border-b border-border bg-background/95 px-5 sm:gap-8 sm:px-8">
             <a
                 href="#top"
                 aria-label={t("home")}
-                className="text-xl leading-none font-semibold tracking-[-0.03em] text-foreground"
+                className="font-heading text-[22px] leading-none font-semibold text-foreground"
             >
                 venselo
             </a>
@@ -24,7 +24,7 @@ export async function SiteHeader() {
                     <a
                         key={key}
                         href={`#${key}`}
-                        className="text-sm text-muted-foreground transition-colors duration-100 hover:text-foreground"
+                        className="text-sm text-muted-foreground transition-colors duration-150 hover:text-foreground"
                     >
                         {t(key)}
                     </a>
@@ -34,7 +34,7 @@ export async function SiteHeader() {
                 <LanguageSwitch label={t("language")} />
                 <a
                     href={SIGN_IN_URL}
-                    className="hidden text-sm text-muted-foreground transition-colors duration-100 hover:text-foreground sm:inline"
+                    className="hidden text-sm text-muted-foreground transition-colors duration-150 hover:text-foreground sm:inline"
                 >
                     {t("signIn")}
                 </a>

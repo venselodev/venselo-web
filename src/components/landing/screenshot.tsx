@@ -28,7 +28,7 @@ export function Screenshot({
 
     return (
         <figure className={className}>
-            <div className="overflow-hidden border border-border bg-card">
+            <div className="overflow-hidden rounded-md border border-border bg-card">
                 {dark.src === light.src ? (
                     <Image
                         src={dark.src}

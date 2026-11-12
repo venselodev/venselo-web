@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server"
 import type { Locale } from "@/i18n/routing"
 import type { ScreenshotName } from "@/lib/screenshots"
 import { cn } from "@/lib/utils"
-import { BODY, GRID, H3, ITEM_TITLE, MAIN, RAIL } from "./grid"
+import { BODY, CARD, GRID, GUTTER, H3, ITEM_TITLE, MAIN, RAIL } from "./grid"
 import { Screenshot } from "./screenshot"
 import { SectionHead } from "./section-head"
 
@@ -44,9 +44,9 @@ export async function Product({ locale }: { locale: Locale }) {
             {feature("overview", "overview")}
             {feature("alerts", "alerts")}
 
-            <div className="grid gap-px border-t border-border bg-border lg:grid-cols-2">
+            <div className={cn(GUTTER, "grid gap-3 border-t border-border pt-10 pb-3 lg:grid-cols-2")}>
                 {(["import", "leads"] as const).map((key) => (
-                    <article key={key} className="flex min-w-0 flex-col gap-3.5 bg-background px-5 pt-10 pb-14 sm:px-8">
+                    <article key={key} className={cn(CARD, "flex min-w-0 flex-col gap-3.5 p-5 sm:p-6")}>
                         <h3 className={H3}>{t(`${key}.title`)}</h3>
                         <p className={cn(BODY, "max-w-[32em]")}>{t(`${key}.body`)}</p>
                         {shot(key, "(min-width: 1024px) 600px, 100vw")}
@@ -54,12 +54,9 @@ export async function Product({ locale }: { locale: Locale }) {
                 ))}
             </div>
 
-            <ul
-                aria-label={t("more.aria")}
-                className="grid gap-px border-t border-border bg-border sm:grid-cols-2 lg:grid-cols-3"
-            >
+            <ul aria-label={t("more.aria")} className={cn(GUTTER, "grid gap-3 pb-14 sm:grid-cols-2 lg:grid-cols-3")}>
                 {more.map((item) => (
-                    <li key={item.title} className="flex flex-col gap-1.5 bg-background px-5 pt-7 pb-8 sm:px-8">
+                    <li key={item.title} className={cn(CARD, "flex flex-col gap-1.5 p-5")}>
                         <span className={ITEM_TITLE}>{item.title}</span>
                         <span className={BODY}>{item.body}</span>
                     </li>

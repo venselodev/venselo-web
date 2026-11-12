@@ -35,9 +35,9 @@ export function ThemeSwitch({ label, dark, light }: { label: string; dark: strin
                     aria-pressed={current === value}
                     onClick={() => setTheme(value)}
                     className={cn(
-                        "h-[30px] px-2.5 text-xs font-medium transition-colors duration-100 not-first:border-l not-first:border-border focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring",
+                        "h-[30px] px-2.5 text-xs font-medium transition-colors duration-150 not-first:border-l not-first:border-border focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring",
                         current === value
-                            ? "bg-foreground text-background"
+                            ? "bg-primary-soft text-primary-text"
                             : "text-muted-foreground hover:text-foreground"
                     )}
                 >

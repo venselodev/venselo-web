@@ -7,7 +7,7 @@ import { Add01Icon } from "@hugeicons/core-free-icons"
 
 import { cn } from "@/lib/utils"
 
-// shadcn Accordion restyled to the Swiss grid: hairline rows, no radius, a plus that turns into a cross.
+// shadcn Accordion restyled to Sunset castle: soft line rows and a plus that turns into a cross.
 function Accordion({ ...props }: React.ComponentProps<typeof AccordionPrimitive.Root>) {
     return <AccordionPrimitive.Root data-slot="accordion" {...props} />
 }
@@ -38,7 +38,7 @@ function AccordionTrigger({ className, children, ...props }: React.ComponentProp
                     icon={Add01Icon}
                     strokeWidth={1.5}
                     aria-hidden="true"
-                    className="size-4 shrink-0 text-muted-foreground transition-transform duration-100 group-data-[state=open]/trigger:rotate-45"
+                    className="size-4 shrink-0 text-muted-foreground transition-transform duration-150 group-data-[state=open]/trigger:rotate-45 motion-reduce:transition-none"
                 />
             </AccordionPrimitive.Trigger>
         </AccordionPrimitive.Header>

@@ -37,11 +37,18 @@
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
 
-    /* Swiss grid extras: utilities like bg-success-soft text-success border-line-strong */
+    /* Sunset castle extras: utilities like bg-primary-soft text-primary-text bg-rose-soft text-gold-text border-line-strong */
     --color-surface-hover: var(--surface-hover);
     --color-line-strong: var(--line-strong);
-    --color-magenta-text: var(--magenta-text);
-    --color-magenta-soft: var(--magenta-soft);
+    --color-primary-hover: var(--primary-hover);
+    --color-primary-text: var(--primary-text);
+    --color-primary-soft: var(--primary-soft);
+    --color-rose: var(--rose);
+    --color-rose-text: var(--rose-text);
+    --color-rose-soft: var(--rose-soft);
+    --color-gold: var(--gold);
+    --color-gold-text: var(--gold-text);
+    --color-gold-soft: var(--gold-soft);
     --color-success: var(--success);
     --color-success-soft: var(--success-soft);
     --color-warning: var(--warning);
@@ -52,19 +59,20 @@
     --color-info-soft: var(--info-soft);
     --color-overlay: var(--overlay);
 
-    /* Square by default: the whole radius scale collapses to 2px so every
-       rounded-* utility in the app follows the grid. Layout regions (cards,
-       tables, sheets) use rounded-none; only rounded-full stays round. */
-    --radius-xs: 1px;
-    --radius-sm: 2px;
-    --radius-md: 2px;
-    --radius-lg: 2px;
-    --radius-xl: 2px;
-    --radius-2xl: 2px;
-    --radius-3xl: 2px;
-    --radius-4xl: 2px;
+    /* Generous rounding: controls use rounded-sm (8px), containers rounded-md
+       (12px). The larger steps are capped at 12px so nothing drifts toward a
+       pill; only rounded-full stays round (switch, radio, dots, avatars). */
+    --radius-xs: 6px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 12px;
+    --radius-xl: 12px;
+    --radius-2xl: 12px;
+    --radius-3xl: 12px;
+    --radius-4xl: 12px;
 
-    /* Flat: nothing in the page flow casts a shadow; floating layers use shadow-float. */
+    /* In-flow surfaces stay flat with a line; floating layers use shadow-float,
+       the hovered primary button shadow-glow. */
     --shadow-2xs: 0 0 #0000;
     --shadow-xs: 0 0 #0000;
     --shadow-sm: 0 0 #0000;
@@ -72,146 +80,180 @@
     --shadow-lg: var(--shadow-float);
     --shadow-xl: var(--shadow-float);
     --shadow-2xl: var(--shadow-float);
+    --shadow-glow: var(--shadow-glow-value);
 
     --text-2xs: 0.625rem;
-    --font-sans: var(--font-plex-sans), "Helvetica Neue", Arial, sans-serif;
-    --font-heading: var(--font-plex-sans), "Helvetica Neue", Arial, sans-serif;
-    --font-mono: var(--font-plex-mono), ui-monospace, Menlo, monospace;
+    --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+    --font-heading: var(--font-fredoka), var(--font-inter), system-ui, sans-serif;
+    --font-mono: var(--font-geist-mono), ui-monospace, Menlo, monospace;
+
+    --animate-twinkle: twinkle 2.4s ease-in-out infinite;
+
+    @keyframes twinkle {
+        0%,
+        100% {
+            opacity: 0.35;
+            transform: scale(0.7) rotate(0deg);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.1) rotate(20deg);
+        }
+    }
 }
 
 /* ============================================================
-   Venselo — Swiss grid
-   True black (dark) or warm off-white paper (light), hairline structure,
-   one brand color (magenta) spent only where the agent must act.
+   Venselo — Castillo al atardecer (Sunset castle)
+   Castle violet leads, sunset rose and star gold accompany. Plain black in
+   dark, soft paper white in light, generous rounded corners, a friendly
+   display face and small stars that twinkle.
    Source of truth: the Venselo design system (tokens.json).
    ============================================================ */
 
-/* === Light: warm off-white paper, never pure white === */
+/* === Light: soft paper white === */
 :root {
-    --radius: 2px;
+    --radius: 12px;
 
-    --background: #f3f2ee;
-    --foreground: #111110;
+    --background: #fafaf9;
+    --foreground: #1a1918;
 
-    --card: #eae8e3;
-    --card-foreground: #111110;
-    --popover: #fbfaf8;
-    --popover-foreground: #111110;
+    --card: #ffffff;
+    --card-foreground: #1a1918;
+    --popover: #ffffff;
+    --popover-foreground: #1a1918;
 
-    --primary: #e0157b;
+    --primary: #8b3fd9;
     --primary-foreground: #ffffff;
 
-    --secondary: #eae8e3;
-    --secondary-foreground: #111110;
+    --secondary: #f2f2f0;
+    --secondary-foreground: #1a1918;
 
-    --muted: #eae8e3;
-    --muted-foreground: #57554f;
+    --muted: #f2f2f0;
+    --muted-foreground: #666461;
 
-    --accent: #e2e0da;
-    --accent-foreground: #111110;
+    --accent: #f2f2f0;
+    --accent-foreground: #1a1918;
 
     --destructive: #b3261e;
 
-    --border: #d9d6cf;
-    --input: #7f7d77;
-    --ring: #e0157b;
+    --border: #e7e6e3;
+    --input: #8c8a86;
+    --ring: #8b3fd9;
 
-    --surface-hover: #e2e0da;
-    --line-strong: #7f7d77;
-    --magenta-hover: #c4106b;
-    --magenta-text: #c8106c;
-    --magenta-soft: #fae7ef;
+    --surface-hover: #f2f2f0;
+    --line-strong: #8c8a86;
+    --brand-edge: transparent; /* brandCssVars swaps in a line when the brand color blends into the canvas */
+    --primary-hover: #7a2fc8;
+    --primary-text: #7a2fc8;
+    --primary-soft: #f1e4ff;
 
-    --success: #1d6b35;
-    --success-soft: #e3f4e8;
-    --warning: #7a5600;
-    --warning-soft: #fff3cc;
+    --rose: #e6297f;
+    --rose-text: #b0125e;
+    --rose-soft: #ffe1ee;
+    --gold: #f5a623;
+    --gold-text: #8a5a00;
+    --gold-soft: #fff0cc;
+
+    --success: #1a6a34;
+    --success-soft: #e2f8e6;
+    --warning: #8a5a00;
+    --warning-soft: #fff0cc;
     --danger: #b3261e;
     --danger-soft: #fde8e6;
-    --info: #1c5a91;
-    --info-soft: #e3f0fb;
+    --info: #0b5c94;
+    --info-soft: #dff3ff;
 
-    --overlay: rgb(0 0 0 / 0.4);
-    --shadow-float: 0 12px 32px rgb(0 0 0 / 0.1);
+    --overlay: rgb(26 25 24 / 0.32);
+    --shadow-float: 0 12px 32px rgb(26 25 24 / 0.1);
+    --shadow-glow-value: 0 4px 14px color-mix(in srgb, var(--primary) 30%, transparent);
 
-    --chart-1: #e0157b;
-    --chart-2: #111110;
-    --chart-3: #57554f;
-    --chart-4: #9e9b94;
-    --chart-5: #cfccc5;
+    --chart-1: #8b3fd9;
+    --chart-2: #e6297f;
+    --chart-3: #f5a623;
+    --chart-4: #2f8fd6;
+    --chart-5: #12a58a;
 
-    --sidebar: #eae8e3;
-    --sidebar-foreground: #111110;
-    --sidebar-primary: #e0157b;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #1a1918;
+    --sidebar-primary: #8b3fd9;
     --sidebar-primary-foreground: #ffffff;
-    --sidebar-accent: #e2e0da;
-    --sidebar-accent-foreground: #111110;
-    --sidebar-border: #d9d6cf;
-    --sidebar-ring: #e0157b;
+    --sidebar-accent: #f2f2f0;
+    --sidebar-accent-foreground: #1a1918;
+    --sidebar-border: #e7e6e3;
+    --sidebar-ring: #8b3fd9;
 
     color-scheme: light;
 }
 
-/* === Dark (default theme): true black === */
+/* === Dark (default theme): plain black === */
 .dark {
-    --background: #0b0b0b;
-    --foreground: #f5f5f5;
+    --background: #0a0a0a;
+    --foreground: #f5f5f4;
 
     --card: #141414;
-    --card-foreground: #f5f5f5;
+    --card-foreground: #f5f5f4;
     --popover: #1a1a1a;
-    --popover-foreground: #f5f5f5;
+    --popover-foreground: #f5f5f4;
 
-    --primary: #e0157b;
-    --primary-foreground: #ffffff;
+    --primary: #b57bff;
+    --primary-foreground: #1a0b2e;
 
-    --secondary: #141414;
-    --secondary-foreground: #f5f5f5;
+    --secondary: #212121;
+    --secondary-foreground: #f5f5f4;
 
-    --muted: #141414;
-    --muted-foreground: #8c8c8c;
+    --muted: #212121;
+    --muted-foreground: #a3a3a1;
 
-    --accent: #1f1f1f;
-    --accent-foreground: #f5f5f5;
+    --accent: #212121;
+    --accent-foreground: #f5f5f4;
 
     --destructive: #ff8a80;
 
     --border: #262626;
-    --input: #707070;
-    --ring: #e0157b;
+    --input: #737373;
+    --ring: #b57bff;
 
-    --surface-hover: #1f1f1f;
-    --line-strong: #707070;
-    --magenta-hover: #c4106b;
-    --magenta-text: #ff5aa8;
-    --magenta-soft: #2e0a1c;
+    --surface-hover: #212121;
+    --line-strong: #737373;
+    --brand-edge: transparent; /* brandCssVars swaps in a line when the brand color blends into the canvas */
+    --primary-hover: #c595ff;
+    --primary-text: #c9a3ff;
+    --primary-soft: #2a1a45;
 
-    --success: #7ee2a0;
-    --success-soft: #10301c;
-    --warning: #f5cf6b;
-    --warning-soft: #33280a;
+    --rose: #ff7ab8;
+    --rose-text: #ffb3d1;
+    --rose-soft: #3d1529;
+    --gold: #ffc94d;
+    --gold-text: #ffd98a;
+    --gold-soft: #3a2a08;
+
+    --success: #a0e8b4;
+    --success-soft: #12301c;
+    --warning: #ffd98a;
+    --warning-soft: #3a2a08;
     --danger: #ff8a80;
     --danger-soft: #3a1210;
-    --info: #8ccbf5;
-    --info-soft: #0f2a3d;
+    --info: #a5d8ff;
+    --info-soft: #0f2a40;
 
-    --overlay: rgb(0 0 0 / 0.7);
-    --shadow-float: 0 12px 32px rgb(0 0 0 / 0.6);
+    --overlay: rgb(0 0 0 / 0.72);
+    --shadow-float: 0 12px 32px rgb(0 0 0 / 0.7);
+    --shadow-glow-value: 0 4px 14px color-mix(in srgb, var(--primary) 35%, transparent);
 
-    --chart-1: #e0157b;
-    --chart-2: #f5f5f5;
-    --chart-3: #a3a3a3;
-    --chart-4: #6b6b6b;
-    --chart-5: #3a3a3a;
+    --chart-1: #b57bff;
+    --chart-2: #ff7ab8;
+    --chart-3: #ffc94d;
+    --chart-4: #6bbcf5;
+    --chart-5: #6fe0c6;
 
     --sidebar: #141414;
-    --sidebar-foreground: #f5f5f5;
-    --sidebar-primary: #e0157b;
-    --sidebar-primary-foreground: #ffffff;
-    --sidebar-accent: #1f1f1f;
-    --sidebar-accent-foreground: #f5f5f5;
+    --sidebar-foreground: #f5f5f4;
+    --sidebar-primary: #b57bff;
+    --sidebar-primary-foreground: #1a0b2e;
+    --sidebar-accent: #212121;
+    --sidebar-accent-foreground: #f5f5f4;
     --sidebar-border: #262626;
-    --sidebar-ring: #e0157b;
+    --sidebar-ring: #b57bff;
 
     color-scheme: dark;
 }
@@ -232,8 +274,24 @@
     }
 
     ::selection {
-        background: var(--magenta-soft);
+        background: var(--primary-soft);
         color: var(--foreground);
+    }
+
+    /* Titles speak in the display face (Fredoka); it is never used below 15px */
+    h1,
+    [data-slot="card-title"],
+    [data-slot="dialog-title"],
+    [data-slot="alert-dialog-title"],
+    [data-slot="sheet-title"],
+    [data-slot="empty-title"] {
+        font-family: var(--font-heading);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .animate-twinkle {
+            animation: none;
+        }
     }
 
     /* Figures line up in tables and KPIs */
@@ -246,14 +304,12 @@
 
 /* === Landing === */
 
-@utility label-mono {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    line-height: 12px;
+/* Section eyebrow: a short violet label above a title, sentence case. */
+@utility eyebrow {
+    font-size: 13px;
+    line-height: 18px;
     font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted-foreground);
+    color: var(--primary-text);
 }
 
 @layer base {

@@ -25,8 +25,8 @@ export function LanguageSwitch({ label, className }: { label: string; className?
                         lang={l}
                         aria-current={active ? "true" : undefined}
                         className={cn(
-                            "inline-flex h-[30px] min-w-9 items-center justify-center px-2 font-mono text-[11px] font-medium tracking-[0.04em] transition-colors duration-100 not-first:border-l not-first:border-border focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring",
-                            active ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"
+                            "inline-flex h-[30px] min-w-9 items-center justify-center px-2 text-xs font-medium transition-colors duration-150 not-first:border-l not-first:border-border focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring",
+                            active ? "bg-primary-soft text-primary-text" : "text-muted-foreground hover:text-foreground"
                         )}
                     >
                         {l.toUpperCase()}

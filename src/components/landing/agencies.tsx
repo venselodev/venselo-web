@@ -34,13 +34,13 @@ export async function Agencies() {
                 <div className="col-span-12 flex flex-col gap-10 lg:col-span-6 lg:col-start-7">
                     <div className="flex flex-col gap-3">
                         <h3 className={H3}>{t("payout.title")}</h3>
-                        <ol className="border border-border">
+                        <ol className="rounded-md border border-border bg-card">
                             {steps.map((s, i) => (
                                 <li
                                     key={s.title}
-                                    className="grid grid-cols-[48px_1fr] gap-3 border-b border-border p-4 last:border-b-0"
+                                    className="grid grid-cols-[40px_1fr] gap-3 border-b border-border p-4 last:border-b-0"
                                 >
-                                    <span className="font-mono text-[22px] leading-[26px] font-medium text-muted-foreground">
+                                    <span className="flex size-7 items-center justify-center rounded-full bg-primary-soft font-heading text-sm font-semibold text-primary-text">
                                         {i + 1}
                                     </span>
                                     <span>
@@ -54,9 +54,17 @@ export async function Agencies() {
 
                     <div className="flex flex-col gap-3">
                         <h3 className={H3}>{t("bonus.title")}</h3>
-                        <div className="grid gap-px border border-border bg-border sm:grid-cols-2">
-                            {bonus.map((b) => (
-                                <div key={b.title} className="flex flex-col gap-1 bg-background p-4">
+                        <div className="grid gap-3 sm:grid-cols-2">
+                            {bonus.map((b, i) => (
+                                <div
+                                    key={b.title}
+                                    className={cn(
+                                        "flex flex-col gap-1 rounded-md border p-4",
+                                        i % 2 === 0
+                                            ? "border-transparent bg-rose-soft"
+                                            : "border-transparent bg-gold-soft"
+                                    )}
+                                >
                                     <span className={ITEM_TITLE}>{b.title}</span>
                                     <span className={BODY}>{b.body}</span>
                                 </div>

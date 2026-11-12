@@ -19,7 +19,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     const l = locale as Locale
 
     return (
-        <div className="mx-auto max-w-[1280px] border-x border-border">
+        <div className="mx-auto max-w-[1280px]">
             <SiteHeader />
             <main id="top">
                 <Hero locale={l} />

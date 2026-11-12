@@ -4,7 +4,7 @@ import { SIGN_IN_URL } from "@/lib/site"
 import { LanguageSwitch } from "./language-switch"
 import { ThemeSwitch } from "./theme-switch"
 
-const LINK = "text-[13px] text-muted-foreground transition-colors duration-100 hover:text-foreground"
+const LINK = "text-[13px] text-muted-foreground transition-colors duration-150 hover:text-foreground"
 
 export async function SiteFooter() {
     const t = await getTranslations("footer")
@@ -13,13 +13,13 @@ export async function SiteFooter() {
     return (
         <footer className="flex flex-wrap items-start gap-x-12 gap-y-8 border-t border-border px-5 py-8 sm:px-8">
             <div className="flex max-w-[260px] flex-col gap-2">
-                <a href="#top" className="text-xl leading-none font-semibold tracking-[-0.03em] text-foreground">
+                <a href="#top" className="font-heading text-[22px] leading-none font-semibold text-foreground">
                     venselo
                 </a>
                 <p className="text-[13px] leading-5 text-muted-foreground">{t("description")}</p>
             </div>
             <nav aria-label={t("product")} className="flex flex-col gap-2">
-                <span className="label-mono">{t("product")}</span>
+                <span className="eyebrow">{t("product")}</span>
                 <a href="#product" className={LINK}>
                     {t("features")}
                 </a>
@@ -31,7 +31,7 @@ export async function SiteFooter() {
                 </a>
             </nav>
             <nav aria-label={t("help")} className="flex flex-col gap-2">
-                <span className="label-mono">{t("help")}</span>
+                <span className="eyebrow">{t("help")}</span>
                 <a href="#faq" className={LINK}>
                     {tn("faq")}
                 </a>
